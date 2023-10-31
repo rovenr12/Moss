@@ -6,8 +6,10 @@ public class RainDrop : MonoBehaviour
 {
     [SerializeField] private float speed = 1f;
     [SerializeField] private Score score;
+    [SerializeField] private Score mossScore;
     [SerializeField] private GameLogic gameLogic;
     [SerializeField] int point = 10;
+    [SerializeField] private int mossPoint = 5;
     [SerializeField] private int failPoint = -5;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,11 @@ public class RainDrop : MonoBehaviour
     public void SetGameLogic(GameLogic gameLogic)
     {
         this.gameLogic = gameLogic;
+    }
+
+    public void SetMossScore(Score score)
+    {
+        this.mossScore = score;
     }
 
     // Update is called once per frame
@@ -44,6 +51,10 @@ public class RainDrop : MonoBehaviour
         else
         {
             score.AddScore(failPoint);
+            if (mossScore != null)
+            {
+                mossScore.AddScore(mossPoint);
+            }
         }
         Destroy(gameObject);
     }

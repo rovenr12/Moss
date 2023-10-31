@@ -201,6 +201,7 @@ MonoBehaviour:
   maxX: 8
   yPosition: 6
   score: {fileID: 248825282}
+  mossScore: {fileID: 1455418978}
   prefabs:
   - {fileID: 2597982853297848901, guid: 9816dd53e5c1b4974beb3a7b021be14b, type: 3}
   - {fileID: 2597982853297848901, guid: 0676c374f67c44011a6054a52a40aa78, type: 3}
@@ -884,8 +885,9 @@ GameObject:
   - component: {fileID: 1455418976}
   - component: {fileID: 1455418975}
   - component: {fileID: 1455418977}
+  - component: {fileID: 1455418978}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Moss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -970,7 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f24d008e8e0a704ca4df4ba25e57c02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 248825282}
+  score: {fileID: 1455418978}
   backgrounds:
   - {fileID: 21300000, guid: 40aae0d286e87414d9e3ab49c19ab05e, type: 3}
   - {fileID: 21300000, guid: 669cbf34e5764463ab08d68a977f3fed, type: 3}
@@ -987,6 +989,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fb30d25a917dd4ed78669b8eb67c733a, type: 3}
   - {fileID: 21300000, guid: 0ef35e26a518844fe9945dadf958b404, type: 3}
   threshold: 20
+--- !u!114 &1455418978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455418974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f96f76c6575745ba8dd44e349f549ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  point: 0
 --- !u!1 &1480052371
 GameObject:
   m_ObjectHideFlags: 0

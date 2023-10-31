@@ -8,6 +8,7 @@ public class RainDropGenerator : MonoBehaviour
     [SerializeField] private int maxX;
     [SerializeField] private int yPosition;
     [SerializeField] private Score score;
+    [SerializeField] private Score mossScore;
     [SerializeField] private GameObject[] prefabs;
     [SerializeField] private int generateFrequency;
     [SerializeField] private GameLogic gameLogic;
@@ -28,7 +29,7 @@ public class RainDropGenerator : MonoBehaviour
         RainDrop rainDrop = newDrop.GetComponent<RainDrop>();
         rainDrop.SetScore(score);
         rainDrop.SetGameLogic(gameLogic);
-        
+        rainDrop.SetMossScore(mossScore);
         yield return new WaitForSeconds(generateFrequency);
         startTimer = true;
     }

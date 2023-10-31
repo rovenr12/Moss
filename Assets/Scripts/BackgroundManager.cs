@@ -13,6 +13,7 @@ public class BackgroundManager : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        score = GetComponent<Score>();
         spriteRenderer.sprite = backgrounds[0];
     }
 
